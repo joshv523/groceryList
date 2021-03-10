@@ -3,6 +3,7 @@ var input = document.getElementById("userInput");
 var ul = document.querySelector("ul");
 var deleteButton = document.getElementsByClassName("delete");
 
+//add event listeners to delete buttons
 for (var i = 0; i < deleteButton.length; i++) {
   deleteButton[i].addEventListener("click", removeListElement);
 }
@@ -10,7 +11,7 @@ for (var i = 0; i < deleteButton.length; i++) {
 function inputLength() {
   return input.value.length;
 }
-
+//creates line through text on click
 function crossOutListElement(event) {
   if (event.target.tagName === "LI") {
     event.target.classList.toggle("done");
